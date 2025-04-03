@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import {
-  IconBlocks,
+	IconBlocks,
 	IconChartBar,
 	IconDashboard,
 	IconDatabase,

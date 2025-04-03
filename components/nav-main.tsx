@@ -8,7 +8,6 @@ import {
 	SidebarMenu,
 	SidebarMenuButton,
 	SidebarMenuItem,
-	SidebarGroupLabel,
 } from "@/components/ui/sidebar";
 
 export function NavMain({
@@ -34,7 +33,7 @@ export function NavMain({
 						</SidebarMenuButton>
 					</SidebarMenuItem>
 				</SidebarMenu>
-				<div className="h-px bg-border/60" /> {/* Divider */}
+				<div className="h-px bg-border/60" />
 				<SidebarMenu>
 					{items.map((item) => (
 						<SidebarMenuItem key={item.title}>
