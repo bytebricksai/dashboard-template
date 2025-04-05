@@ -7,7 +7,7 @@ import data from "./data.json";
 
 export default function DashboardPage() {
 	// Later we'll add logic to check if there's data
-	const hasData = false;
+	const hasData = true;
 
 	return (
 		<>
