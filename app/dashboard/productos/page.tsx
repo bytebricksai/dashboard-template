@@ -2,7 +2,7 @@ import { ProductsEmptyState } from "@/components/products/empty-state";
 import { ProductsTable } from "@/components/products/products-table";
 import { Product } from "@/types/products";
 
-export const mockProducts: Product[] = [
+const mockProducts: Product[] = [
 	{
 		id: "PROD-001",
 		name: "Camisa Casual",
