@@ -12,8 +12,7 @@ export function ProductsEmptyState() {
 				<h3 className="text-xl font-semibold">No hay productos</h3>
 				<p className="text-muted-foreground max-w-[400px]">
 					Aún no has agregado ningún producto. Los productos que agregues
-					aparecerán aquí y estarán disponibles para venta a través del agente
-					de IA.
+					aparecerán aquí y estarán disponibles para la venta a través del SalesAgent.
 				</p>
 			</div>
 			<Button>
