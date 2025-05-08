@@ -44,18 +44,8 @@ const data = {
 			icon: IconFolder,
 		},
 		{
-			title: "Ventas",
-			url: "/dashboard/ventas",
-			icon: IconChartBar,
-		},
-		{
-			title: "Inventario",
-			url: "/dashboard/inventario",
-			icon: IconDatabase,
-		},
-		{
 			title: "Análisis",
-			url: "/dashboard/analisis",
+			url: "/dashboard/analytics",
 			icon: IconReport,
 		},
 	],
