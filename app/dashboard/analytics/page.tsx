@@ -40,7 +40,7 @@ const mockCategoryData = [
 
 export default function AnalyticsPage() {
     return (
-        <div className="flex flex-col gap-6 p-4 lg:p-6">
+        <div className="flex flex-col gap-6 p-4 lg:p-6" suppressHydrationWarning>
             <h1 className="text-2xl font-bold">Analíticas de mi negocio</h1>
 
             {!hasData ? (
@@ -54,7 +54,7 @@ export default function AnalyticsPage() {
                     customerRetention={mockKpis.customerRetention}
                     />
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                         <SalesPerformanceChart data={mockSalesData} />
                         <ProductCategoryChart data={mockCategoryData} />
                     </div>

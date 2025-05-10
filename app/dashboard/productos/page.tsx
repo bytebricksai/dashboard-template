@@ -47,7 +47,7 @@ export default function ProductsPage() {
 	const hasProducts = mockProducts.length > 0;
 
 	return (
-		<div className="flex flex-col gap-6 p-4 lg:p-6">
+		<div className="flex flex-col gap-6 p-4 lg:p-6" suppressHydrationWarning>
 			<div className="flex flex-row items-center justify-between">
 				<h1 className="text-2xl font-bold">Mis productos</h1>
 				<Button>

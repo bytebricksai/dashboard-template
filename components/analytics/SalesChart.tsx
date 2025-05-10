@@ -25,7 +25,7 @@ export function SalesPerformanceChart({ data }: SalesPerformanceChartProps) {
 					<YAxis stroke="#888" fontSize={12} />
 					<Tooltip />
 					<Line
-						type="monotone"
+						type="natural"
 						dataKey="sales"
 						stroke="#3b82f6"
 						strokeWidth={2}

@@ -64,7 +64,7 @@ export default function DashboardPage() {
 						salesCount={mockTodaySales.length}
 						lowStockCount={mockLowStockProducts.length}
 					/>
-					<div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+					<div className="flex flex-col gap-4">
 						{/* Ventas del dia */}
 						<div className="flex flex-col gap-3">
 							<h2 className="text-lg font-semibold"> Ventas de hoy </h2>
@@ -80,4 +80,4 @@ export default function DashboardPage() {
 			)}
 		</>
 	);
-}
+};

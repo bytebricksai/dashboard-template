@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import {
+	IconCoin,
 	IconCoinOff,
 	IconPackage,
 	IconShoppingCart,
@@ -33,7 +34,7 @@ export function DailySummary({
 						</h3>
 					</div>
 					<div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center">
-						<IconCoinOff className="h-6 w-6 text-primary" />
+						<IconCoin className="h-6 w-6 text-primary" />
 					</div>
 				</CardContent>
 			</Card>

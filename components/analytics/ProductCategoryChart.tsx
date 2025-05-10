@@ -27,7 +27,7 @@ export function ProductCategoryChart({ data }: ProductCategoryChartProps) {
 						nameKey="category"
 						cx="50%"
 						cy="50%"
-						outerRadius={80}
+						outerRadius={75}
 						label
 					>
 						{data.map((entry, index) => (
