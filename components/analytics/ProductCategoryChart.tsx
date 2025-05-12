@@ -8,6 +8,8 @@ import {
 	Tooltip,
 	Legend,
 } from "recharts";
+import { ErrorBoundary } from "react-error-boundary";
+import { ErrorCard } from "./ErrorCard";
 
 const COLORS = ["#3b82f6", "#10b981", "#f59e0b", "#ef4444"];
 
@@ -15,10 +17,8 @@ interface ProductCategoryChartProps {
 	data: { category: string; percentage: number }[];
 }
 
-export function ProductCategoryChart({ data }: ProductCategoryChartProps) {
+function Chart({ data }: ProductCategoryChartProps) {
 	return (
-		<div className="bg-card rounded-xl p-4 shadow">
-			<h3 className="text-md font-semibold mb-2">Distribución por Categoría</h3>
 			<ResponsiveContainer width="100%" height={240}>
 				<PieChart>
 					<Pie
@@ -41,6 +41,16 @@ export function ProductCategoryChart({ data }: ProductCategoryChartProps) {
 					<Legend />
 				</PieChart>
 			</ResponsiveContainer>
-		</div>
 	);
+};
+
+export function ProductCategoryChart({ data }: ProductCategoryChartProps) {
+	return (
+		<ErrorBoundary fallback={<ErrorCard title="Ventas por categoría" message="Error al mostrar gráfico." />}>
+			<div className="bg-card rounded-xl  p-4 shadow">
+				<h3 className="text-md font-semibold mb-2">Ventas por categoría</h3>
+				<Chart data={data} />
+			</div>
+		</ErrorBoundary>
+	)
 }

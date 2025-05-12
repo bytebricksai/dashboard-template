@@ -8,17 +8,15 @@ import {
 	YAxis,
 	Tooltip,
 } from "recharts";
+import { ErrorBoundary } from "react-error-boundary";
+import { ErrorCard } from "./ErrorCard";
 
 interface SalesPerformanceChartProps {
 	data: { date: string; sales: number }[];
 }
 
-export function SalesPerformanceChart({ data }: SalesPerformanceChartProps) {
+function Chart({ data }: SalesPerformanceChartProps) {
 	return (
-		<div className="bg-card rounded-xl p-4 shadow">
-			<h3 className="text-md font-semibold mb-2">
-				Rendimiento de Ventas (7 días)
-			</h3>
 			<ResponsiveContainer width="100%" height={240}>
 				<LineChart data={data}>
 					<XAxis dataKey="date" stroke="#888" fontSize={12} />
@@ -32,6 +30,16 @@ export function SalesPerformanceChart({ data }: SalesPerformanceChartProps) {
 					/>
 				</LineChart>
 			</ResponsiveContainer>
-		</div>
 	);
+};
+
+export function SalesPerformanceChart({ data }: SalesPerformanceChartProps) {
+	return (
+		<ErrorBoundary fallback={<ErrorCard title="Rendimiento de ventas" message="Error al mostrar gráfico." />}>
+			<div className="bg-card rounded-xl shadow p-4">
+				<h3 className="text-md font-semibold mb-2">Rendimiento de ventas</h3>
+				<Chart data={data} />
+			</div>
+		</ErrorBoundary>
+	)
 }

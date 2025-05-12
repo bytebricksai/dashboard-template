@@ -1,8 +1,11 @@
+'use client';
+
 import { ProductsEmptyState } from "@/components/products/empty-state";
 import { ProductsTable } from "@/components/products/products-table";
 import { Button } from "@/components/ui/button";
 import { IconPlus } from "@tabler/icons-react";
 import { Product } from "@/types/products";
+import { useState } from "react";
 
 const mockProducts: Product[] = [
 	{
@@ -44,6 +47,7 @@ const mockProducts: Product[] = [
 ];
 
 export default function ProductsPage() {
+	const [products, setProducts] = useState('');
 	const hasProducts = mockProducts.length > 0;
 
 	return (
